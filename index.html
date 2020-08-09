@@ -1,0 +1,432 @@
+<!-- Name : Cheung Tsz Ho -->
+<!-- SID : 1155102444 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCI2720 lab1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    html{
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    body {
+        background-color: #E5E0CD;
+        position: relative;
+        outline: none;
+        margin : 0;
+        min-height: 100%;
+        font-family: monospace;
+        font-size: larger;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-family: Comic Sans MS, cursive;
+    }
+
+    h5 {
+        font-size: 10px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .header {
+        position: relative;
+        background: url(https://events.keep.edu.hk/gcms2017/wp-content/uploads/2017/07/1_University-Main-Entrance-e1500040575763-1024x448.jpg) no-repeat center 45%;
+        background-size: 100% 170px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: rgba(236, 230, 230, 0.952);
+        height: auto;
+        min-height: 170px;
+    }
+
+    
+    .container{
+        height: 100%;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .content{
+        margin: 1.5em;
+    }
+
+    .header .self-intro {
+        position: absolute;
+        text-align: left;
+        padding: 20px;
+        top: 15%
+    }
+
+    .nav{
+        padding-top: 5vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navForm{
+        display: flex;
+        flex-direction: column;
+    }
+    .navForm input[type="radio"] {
+        display: none;
+    }
+
+    .navForm{
+        width:100% ;
+        display: relative;
+    }
+    
+    .nav-item label{
+        font-size: larger;
+        padding: 2px auto;
+        margin: 10px;
+        -webkit-box-align:center;
+        -webkit-box-pack:center;
+        display:-webkit-box;
+        cursor: pointer;
+    }
+
+    .nav-item:hover {
+        background-color: #c9c0a2;
+    } 
+
+
+
+    .container{
+        display: flex;
+        justify-content: center;
+        height: 70%;
+        min-height: 100%;
+    }
+
+    .navForm input[type="radio"]:checked+label{
+        background-color: #d6cdab;
+    }
+
+    .content {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 2.6rem;
+    }
+    
+    .about{
+        padding: 5px;
+        background-color: rgba(103, 155, 106, 0.3);
+    }
+    
+    .hobbies {
+        display: none;
+        padding: 5px;
+        background-color: rgba(120, 152, 161, 0.3);
+    }
+
+    .courses {
+        display: none;
+        padding: 5px;
+        background-color: rgba(151, 106, 113, 0.3);
+    }
+
+    .about-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .about-paragraph{
+        flex: 6;
+    }
+
+    .about-picture{
+        flex: 4;
+    }
+
+    .about-picture img{
+        width: 60%;
+        height: auto;
+    }
+
+    .about p{
+        font-size: larger;
+        font-family: Tahoma, Geneva, sans-serif;
+        color: #333532;
+        padding: 0 2em;
+    }
+
+    .hobbies li{
+        list-style-type:decimal;
+        font-size: larger;
+    }
+
+    .courses h4{
+        font-size: x-large;
+    }
+
+    .course-table{
+        margin: 20px;
+    }
+
+    .course-table table{
+        width: 100%;
+    }
+
+    .course-table th:first-child,
+    .course-table td:first-child{
+        width: 20%;
+        min-width: 8em;
+        max-width: 20%;
+        word-break: break-all;
+    }
+
+    .course-table th{
+        background-color: rgba(185, 110, 185, 0.3);
+        font-size: larger;
+        text-align: center;
+    }
+
+    .course-table td{
+        font-size: larger;
+        text-align: center;
+    }
+
+    .hobbies ul{
+        width: 100%;
+    }
+
+    .hobbies li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    footer{
+        position: absolute;
+        background-color: #f1efe5;
+        height: 50px;
+        width: 100%;
+        bottom: 0;
+    }
+    
+    footer p{
+        padding-bottom: 10px;
+    }
+    @media screen and (min-width: 400px){
+        .navForm{
+            flex-direction: row;
+            justify-content: center;
+        }
+        .nav-item{
+            padding: 3px 15px;
+            margin-left: 2vw;
+            height: auto;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        label{
+            /* border: 1px solid #111111; */
+            padding: 0;
+        }
+        .navForm input[type="radio"]:checked+label {
+            background-color: transparent;
+            font-weight: bold;
+            font-size: large;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom: solid 2.5px rgba(114, 108, 108, 0.952);
+        }
+    }
+    
+    @media screen and (min-width: 750px) {
+        h2 {
+            font-size: 3vw;
+        }
+        
+        h5 {
+            font-size: 1.7vw;
+        }
+        
+        .header {
+            height: 270px;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+        }
+        section{
+            width:80%;
+        }
+        .about-content{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .about-picture img{
+            width: 100%;
+            height: auto;
+        }
+        
+    }
+    
+    @media screen and (min-width: 1250px) {
+        h2 {
+            font-size: 2.3vw;
+        }
+        
+        h5 {
+            font-size: 1.3vw;
+        }
+        
+        .header {
+            height: 400px;
+        }
+        
+        .about img{
+            width: 60%;
+        }
+        
+    }
+</style>
+
+<body>
+    <header class="header">
+        <div class="self-intro">
+            <h2>Hi everyone!<br> I am Cheung Tsz Ho</h2>
+            <h5>A computer science major student in CUHK</h5>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="navForm" onchange="changePage(event)">
+            <div class="nav-item">
+                <input type="radio" id="about" name="section" value="about" checked><label for="about"
+                    class="about-label btn">About</label>
+            </div>
+            <div class="nav-item">
+                <input type="radio" id="hobbies" name="section" value="hobbies"><label for="hobbies"
+                    class="btn">Hobbies</label>
+            </div>
+            <div class="nav-item">
+                <input type="radio" id="courses" name="section" value="courses"><label for="courses"
+                    class="btn ">Courses</label>
+            </div>
+            <!-- <div class="nav-item">
+                <input type="radio" id="special" name="section" value="special"><label for="special"
+                    class="btn">Special</label> -->
+        </div>
+        <span class="border"></span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <section class="about" id="about">
+                <h2>About me</h2>
+                <hr>
+                <div class="about-content">
+
+                    <div class="about-paragraph">
+                        <p>
+                            I am currently a computer science year3 student in CUHK.
+                            My interest is solve daily boring task with involving programming knowledge.
+                            I have just start learn web application development in CSCI 2720.
+                            My personal goal is to find a job with what I have learnt.
+                        </p>
+                    </div>
+                    <div class="about-picture">
+                        <img src="cute-profile.png">
+                    </div>
+
+            </section>
+            <section class="courses">
+                <h2>Courses in CUHK</h2>
+                <hr>
+                <h4>Courses that I have taken </h4>
+                <div class="course-table">
+                    <table>
+                        <tr>
+                            <th>Course code</th>
+                            <th>Course title</th>
+                        </tr>
+                        <tr>
+                            <td>ENGG1110</td>
+                            <td>Problem Solving By Programming</td>
+                        </tr>
+                        <tr>
+                            <td>CSCI1130</td>
+                            <td>Introduction to Computing Using Java</td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>Courses that I am achieving</h4>
+                <div class="course-table">
+                    <table>
+                        <tr>
+                            <th>Course code</th>
+                            <th>Course title</th>
+                        </tr>
+                        <tr>
+                            <td>CSCI2720</td>
+                            <td>Building Web Applications</td>
+                        </tr>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section class="hobbies">
+                <h2>My hobbies</h2>
+                <hr>
+                <ul>
+                    <li>Japanese</li>
+                    <li>Badminton</li>
+                    <li>Youtube</li>
+                </ul>
+
+            </section>
+        </div>
+
+        <footer>
+            <p>This website is created by © Cheung Tsz Ho</p>
+        </footer>
+    </div>
+    <script>
+        // var navItem = document.querySelectorAll('.nav-item')
+        // console.log(navItem[0])
+        // navItem.forEach(item => {
+        //     item.addEventListener('click', e => {
+        //         e.preventDefault()
+        //         item.children[0].checked = true
+        //     }, false)
+        // })
+        const changePage = e => {
+            if (e.target.value === 'about') {
+                document.querySelector('.about').style.display = 'inline-block';
+                document.querySelector('.courses').style.display = 'none';
+                document.querySelector('.hobbies').style.display = 'none';
+            }
+            if (e.target.value === 'courses') {
+                document.querySelector('.courses').style.display = 'inline-block';
+                document.querySelector('.about').style.display = 'none';
+                document.querySelector('.hobbies').style.display = 'none';
+            }
+            if (e.target.value === 'hobbies') {
+                document.querySelector('.hobbies').style.display = 'inline-block';
+                document.querySelector('.courses').style.display = 'none';
+                document.querySelector('.about').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
